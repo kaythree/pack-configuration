@@ -30,14 +30,14 @@
     border: 1px solid #ccc;
     display: inline-block;
     padding: 2px 11px;
-    width: 236px;
+    width: 230px;
 }
 
 .active-peice{
   background: #2881db none repeat scroll 0 0;
     float: left;
     height: 25px;
-    left: 262px;
+    left: 256px;
     position: relative;
     top: -25px;
     width: 4px;
@@ -312,7 +312,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', end
 .tt-bottom-row {
     clear: both;
     overflow: hidden;
-    background: #ccc;
+    background: #EEEEEE;
 }
 
 .tt-rcol-topnav li {
@@ -328,7 +328,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', end
 
 .tt-pagination {
     clear: both;
+    display: inline-block;
+    padding-top: 20px;
+    text-align: right;
+    width: 100%;
 }
+
+.tt-pagination span.add-border{
+  border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 2px 6px;
+}
+
+.tt-pagination span.current{
+  background-color: orange;
+  border: 1px solid orange;
+}
+
 
 .noItems {
     float: right;
@@ -418,10 +435,39 @@ input.tt-item-inp {
 .active-grid-icon {
     background-color: #2881db;
     height: 36px;
-    left: 16.1%;
+    left: 16.8%;
     position: absolute;
     width: 5px;
 }
 .hide{
   display: none !important;
+}
+.table-title{
+  margin: 0;
+    padding: 10px 0;
+     background-color: #FAFAFA
+}
+
+.table-title span i{
+    font-weight: bold;
+    padding-right: 10px;
+}
+.table-grid-cont{
+  border: 1px solid #EAEAEA;
+}
+.table-title span{
+   padding-left: 10px;
+}
+.table-grid-cont .tt-cont-main{
+  padding:10px;
+}
+
+.close-btn {
+    color: red;
+    float: right;
+    font-family: verdana;
+    font-size: 11px;
+    font-weight: bold;
+    padding-right: 20px;
+    cursor: pointer;
 }
