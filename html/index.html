@@ -68,10 +68,12 @@
                 <p class="table-title"><span class="tt-id"><i class="fa fa-angle-down"></i> 0123567890</span> Brief description goes here, Brief description goes here...</p>
                 <div class="tt-cont">
                     <div class="tt-sidebuttons">
+                        <div class="active-grid-icon"></div>
                         <div class="sbutton active">
                             <i class="fa fa-columns"></i>
                         </div>
-                        <div class="sbutton active">
+                        <div class="active-grid-icon hide"></div>
+                        <div class="sbutton">
                             <i class="fa fa-bars"></i>
                         </div>
                     </div>
@@ -79,16 +81,17 @@
                         <div class="tt-main-row">
                             <div class="tt-left-col">
                                 <span class="tt-lcol-title">Company Name</span>
+                                <span class="active-hierarchy">Hierarchy 01/01/2015</span>
+                                <span class="active-peice">&nbsp;</span>
                                 <ul>
-                                    <li class="active">Hierarchy 01/01/2015</li>
                                     <li><i class="fa fa-th-large"></i> PL 01234567890123</li>
                                     <li><i class="fa fa-th-large"></i> CA 01234567890123</li>
                                     <li><i class="fa fa-th-large"></i> PK 01234567890123</li>
                                     <li><i class="fa fa-th-large"></i> EA 01234567890123</li>
                                 </ul>
                                 <span class="tt-lcol-title">Company Name</span>
+                                <span class="active-hierarchy no-bg-color">Hierarchy 01/01/2015</span>
                                 <ul>
-                                    <li>Hierarchy 01/01/2015</li>
                                     <li><i class="fa fa-th-large"></i> PL 01234567890123</li>
                                     <li><i class="fa fa-th-large"></i> CA 01234567890123</li>
                                     <li><i class="fa fa-th-large"></i> PK 01234567890123</li>
@@ -102,16 +105,22 @@
                                 </ul>
                                 <table class="tt-rcol-table">
                                     <tr>
-                                        <th></th>
-                                        <th>#items</th>
+                                        <th style="width: 25%;"></th>
+                                        <th class="left-align-th">#items</th>
                                     </tr>
                                     <tr>
-                                        <td>6/6</td>
-                                        <td><input class="tt-item-inp" type="text"></td>
+                                        <td>
+                                            <span class="td-item-one"><input type="checkbox" name="item-name"></span>
+                                            <span class="td-item-two">6/6</span>
+                                        </td>
+                                        <td><input class="tt-item-inp" type="text" value="2"></td>
                                     </tr>
                                     <tr>
-                                        <td>6/1</td>
-                                        <td><input class="tt-item-inp" type="text"></td>
+                                        <td>
+                                            <span class="td-item-one"><input type="checkbox" name="item-name"></span>
+                                            <span class="td-item-two">6/1</span>
+                                        </td>
+                                        <td><input class="tt-item-inp" type="text" value="3"></td>
                                     </tr>
                                 </table>
                             </div>
