@@ -1,0 +1,149 @@
+<!doctype html>
+<html ng-app="PkgModule">
+    <head>
+        <title>Pack Configuration</title>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+  <body>
+    <div class="main-container" ng-controller="PkgController">
+    	<h1>Search</h1>
+        <div class="header-container">
+          	<div class="tab-img"><i class="fa fa-bars"></i></div>
+          	<div class="sprdsht-img active"><i class="fa fa-bars"></i></div>
+            <div class="steps">
+              	<div class="step step-one">
+                    <span>Step 1</span>
+                    <span> Enter Information</span>
+                </div>
+              	<div class="step step-two active">
+                    <span>Step 2</span>
+                    <span>Pack Config</span>
+                </div>
+              	<div class="step step-three">
+                    <span>Step 3 </span>
+                    <span>Supply Item</span>
+                </div>
+                <div class="step step-four">
+                    <span>Step 4</span>
+                    <span>Content Here</span>
+                </div>
+                <div class="step summary">
+                    <span>Summary</span>
+                    <span>Confirm &amp; submit</span>
+                </div>   	
+            </div>    
+    	</div> 
+        <div class="table-container">
+            <p class="step-head"><span class="step-id">Step 2</span>- Pack Configuration</p>
+            <div class="rec-bar">
+                <span>Recipient GLN</span>
+                <div class="selectGroupBlock">
+                    <div class="select-group-input">
+                        <span class="selected-val">US WALLMART</span>
+                        <i class="fa fa-caret-down selGrpIcon" ng-click="showGroupDropdownBlock()"></i>
+                    </div>
+                    <div class="groups-box" ng-class="{'show':groupDropdownBox, 'hide':!groupDropdownBox}">
+                        <div class="group-marker"><i class="fa fa-caret-up fa-4x" ng-click="showGroupDropdownBlock()"></i></div>
+                        <div class="role">
+                            <span class="role-header">Roles</span>
+                            <div class="list" ng-repeat="role in roleArr">
+                                <span name="{{role}}" location="left" index="{{$index}}" ng-click="movableItem($event)">{{role}}</span>
+                            </div>
+                        </div>
+                        <div class="move-btn">
+                            <div class="left" ng-click="moveItem('left')" ng-class="{'active-left':activeBtnLeft}"> <i class="fa fa-chevron-right" style="padding-top:4px; padding-left:2px;"></i></div>
+                            <div class="right" ng-click="moveItem('right')" ng-class="{'active-right':activeBtnRight}"> <i class="fa fa-chevron-left" style="padding-top:4px; padding-left:2px;"></i></div>
+                        </div>
+                        <div class="role role-adj">
+                            <span class="role-header">Selected Role(s)</span>
+                            <div class="list" ng-repeat="role in roleSelectedArr">
+                                <span name="{{role}}" location="right" index="{{$index}}" ng-click="movableItem($event)">{{role}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="table-grid-cont">
+                <p class="table-title"><span class="tt-id"><i class="fa fa-angle-down"></i> 0123567890</span> Brief description goes here, Brief description goes here...</p>
+                <div class="tt-cont">
+                    <div class="tt-sidebuttons">
+                        <div class="sbutton active">
+                            <i class="fa fa-columns"></i>
+                        </div>
+                        <div class="sbutton active">
+                            <i class="fa fa-bars"></i>
+                        </div>
+                    </div>
+                    <div class="tt-grid">
+                        <div class="tt-main-row">
+                            <div class="tt-left-col">
+                                <span class="tt-lcol-title">Company Name</span>
+                                <ul>
+                                    <li class="active">Hierarchy 01/01/2015</li>
+                                    <li><i class="fa fa-th-large"></i> PL 01234567890123</li>
+                                    <li><i class="fa fa-th-large"></i> CA 01234567890123</li>
+                                    <li><i class="fa fa-th-large"></i> PK 01234567890123</li>
+                                    <li><i class="fa fa-th-large"></i> EA 01234567890123</li>
+                                </ul>
+                                <span class="tt-lcol-title">Company Name</span>
+                                <ul>
+                                    <li>Hierarchy 01/01/2015</li>
+                                    <li><i class="fa fa-th-large"></i> PL 01234567890123</li>
+                                    <li><i class="fa fa-th-large"></i> CA 01234567890123</li>
+                                    <li><i class="fa fa-th-large"></i> PK 01234567890123</li>
+                                    <li><i class="fa fa-th-large"></i> EA 01234567890123</li>
+                                </ul>
+                            </div>
+                            <div class="tt-right-col">
+                                <ul class="tt-rcol-topnav">
+                                    <li class="selected">Pack</li>
+                                    <li>Attributes</li>
+                                </ul>
+                                <table class="tt-rcol-table">
+                                    <tr>
+                                        <th></th>
+                                        <th>#items</th>
+                                    </tr>
+                                    <tr>
+                                        <td>6/6</td>
+                                        <td><input class="tt-item-inp" type="text"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6/1</td>
+                                        <td><input class="tt-item-inp" type="text"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tt-bottom-row">
+                            <div class="noItems">#Items <span>5</span></div>
+                        </div>
+                    </div>
+                    <div class="tt-pagination">
+                        <div class="tt-pages">
+                            <div class="tt-page-btns">
+                                <ul>
+                                    <li><i class="fa fa-step-backward"></i></li>
+                                    <li><i class="fa fa-angle-left"></i></li>
+                                    <li class="current">1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li><i class="fa fa-angle-right"></i></li>
+                                    <li><i class="fa fa-step-forward"></i></li>
+                                </ul>
+                            </div>
+                            <div class="tt-page-present">
+                                <span><i class="fa fa-caret-left"></i>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>       
+  </body>
+</html>
