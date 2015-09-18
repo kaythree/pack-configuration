@@ -270,13 +270,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', end
     background: #d7ebfe;
     text-align: center;
     color:#CDD6DB;
+    cursor: pointer;
 }
 
-.tt-grid {
+.tt-grid , .tt-grid-two{
     width: 94%;
     float: right;
     border: 1px solid #ccc;
     border-left: 1px solid #2881DB;
+}
+
+.tt-grid-two .tt-main-row .tt-left-col{
+    width: 100%;
 }
 
 .tt-main-row .tt-left-col {
@@ -312,7 +317,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', end
 .tt-bottom-row {
     clear: both;
     overflow: hidden;
-    background: #EEEEEE;
+    background: #f4f5ed;
 }
 
 .tt-rcol-topnav li {
@@ -349,7 +354,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', end
 
 .noItems {
     float: right;
-    padding: 10px;
+    padding: 5px 10px;
 }
 
 .noItems span {
@@ -432,7 +437,7 @@ input.tt-item-inp {
   padding-left: 30px;
 }
 
-.active-grid-icon {
+.active-grid-icon1 , .active-grid-icon2 {
     background-color: #2881db;
     height: 36px;
     left: 16.8%;
@@ -470,4 +475,35 @@ input.tt-item-inp {
     font-weight: bold;
     padding-right: 20px;
     cursor: pointer;
+}
+
+.two-inner-view {
+    clear: both;
+    color: #333;
+    float: left;
+    height: auto;
+    padding: 15px;
+    width: 100%;
+}
+
+.item1, .item2 , .item3{
+    float: left;
+    width: 47%;
+}
+.item3{
+    width: 100%;
+    padding-top: 10px;
+}
+.item1 > span , .item2 > span ,.item3 > span{
+    display: block;
+    padding: 2px 0;
+}
+
+.item1 input , .item2 input {
+    height: 20px;
+    width: 90%;
+}
+.item3 textarea{
+    height: 120px;
+    width: 890px;
 }

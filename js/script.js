@@ -1,6 +1,6 @@
 var pkg = angular.module("PkgModule",[]);
 pkg.controller("PkgController" , function($scope){
-	$scope.showGrid = $scope.isTreeVisible = $scope.showAddUser= $scope.showGroups = $scope.activeUser = $scope.activeGroup = $scope.groupDropdownBox = false;
+	$scope.showGrid = $scope.isTreeVisible = $scope.showAddUser= $scope.showGroups = $scope.activeUser = $scope.activeGroup = $scope.groupDropdownBox = $scope.showTtGridTwo = false;
 	$scope.roleArr = ["Role1", "Role2", "Role3", "Role4","Role5", "Role6","Role7","Role8","Role9","Role10"];
 	$scope.roleSelectedArr = [];
 	$scope.blueLayer = $scope.showD3 = $scope.itemSelected = $scope.itemPosition = $scope.itemIndex  = $scope.activeBtnLeft = $scope.activeBtnRight=""
@@ -20,6 +20,14 @@ pkg.controller("PkgController" , function($scope){
 			$scope.blueLayer = true;
 		}else{
 			$scope.blueLayer = false;
+		}
+	}
+	$scope.showTab = function(tabType){
+		if(tabType=='first'){
+			$scope.showTtGridTwo = false;
+
+		} else if(tabType=='second'){
+			$scope.showTtGridTwo = true;
 		}
 	}
 	$scope.expandTree =  function(obj){

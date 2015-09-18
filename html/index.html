@@ -68,16 +68,16 @@
                 <p class="table-title"><span class="tt-id"><i class="fa fa-angle-down"></i> 0123567890</span> Brief description goes here, Brief description goes here...<span class="close-btn">X</span></p>
                 <div class="tt-cont-main">
                     <div class="tt-sidebuttons">
-                        <div class="active-grid-icon"></div>
-                        <div class="sbutton active">
+                        <div class="active-grid-icon1" ng-class="{'hide':showTtGridTwo}"></div>
+                        <div ng-click="showTab('first')" class="sbutton" ng-class="{'active':!showTtGridTwo}">
                             <i class="fa fa-columns"></i>
                         </div>
-                        <div class="active-grid-icon hide"></div>
-                        <div class="sbutton">
+                        <div class="active-grid-icon2" ng-class="{'hide':!showTtGridTwo}"></div>
+                        <div  ng-click="showTab('second')" class="sbutton" ng-class="{'active':showTtGridTwo}">
                             <i class="fa fa-bars"></i>
                         </div>
                     </div>
-                    <div class="tt-grid">
+                    <div class="tt-grid" ng-class="{'hide':showTtGridTwo}">
                         <div class="tt-main-row">
                             <div class="tt-left-col">
                                 <span class="tt-lcol-title">Company Name</span>
@@ -123,6 +123,30 @@
                                         <td><input class="tt-item-inp" type="text" value="3"></td>
                                     </tr>
                                 </table>
+                            </div>
+                        </div>
+                        <div class="tt-bottom-row">
+                            <div class="noItems">#Items <span><input type="text" name="page" size="2" value="5"></span></div>
+                        </div>
+                    </div>
+                    <div class="tt-grid-two" ng-class="{'hide':!showTtGridTwo}">
+                        <div class="tt-main-row">
+                            <div class="tt-left-col">
+                                <span class="tt-lcol-title">Provider GLN : <b>01234567890123 - GLN Name</b></span>
+                                <div class="two-inner-view">
+                                    <div class="item1">
+                                        <span>Target Market</span>
+                                        <span><input type="text" name="tmarket" placeholder="Value"></span>
+                                    </div>
+                                    <div class="item2">
+                                        <span>GPC</span>
+                                        <span><input type="text" name="gpc" placeholder="Value"></span>
+                                    </div>
+                                    <div class="item3">
+                                        <span>Description</span>
+                                        <span><textarea rows="" cols=""></textarea></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="tt-bottom-row">
